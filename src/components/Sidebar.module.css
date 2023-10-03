@@ -55,5 +55,14 @@
 
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    gap: 0.3rem;
+
+    transition: all 0.2s;
+
+}
+
+.sidebar footer a:hover{
+    background: var(--gray-900);
+    border: 1px solid var(--gray-900);
 }
