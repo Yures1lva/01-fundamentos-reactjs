@@ -103,7 +103,7 @@
     outline: 1px solid var(--green-300);
 }
 
-.commentForm footer{
+.commentForm .commentFooter{
     visibility: hidden;
     max-height: 0;
     
@@ -111,14 +111,14 @@
 
 }
 
-.commentForm:focus-within footer{
+.commentForm:focus-within .commentFooter{
     visibility: visible;
     max-height: none;
 
 }
 
 
-.commentForm footer >  button {
+.buttonForm {
     padding: 1rem;
     width: 6.75rem;
     color: var(--white);
@@ -129,8 +129,12 @@
     font-weight: bold;
 }
 
-.commentForm button:hover {
+.buttonForm:hover {
     background: var(--green-300);
     cursor: pointer;
 
+}
+
+.commentList {
+    margin-top: 2rem;
 }

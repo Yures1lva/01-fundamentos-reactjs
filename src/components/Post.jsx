@@ -30,8 +30,8 @@ export function Post(){
 
                 <textarea  placeholder="Deixe um comentário"></textarea>
 
-                <footer>
-                    <button type="submit">Publicar</button>
+                <footer className={styles.commentFooter}>
+                    <button className={styles.buttonForm} type="submit">Publicar</button>
                 </footer>
 
                 <div className={styles.commentList}>

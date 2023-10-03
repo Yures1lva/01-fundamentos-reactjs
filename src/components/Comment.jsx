@@ -8,7 +8,7 @@ export function Comment(){
         <div className={styles.comment}>
             <img src="https://github.com/yures1lva.png"  />
             <div className={styles.contentBox}>
-                <div className={styles.commentBox}>
+                <div className={styles.commentContent}>
                     <header>
                         <div className={styles.authorAndTime}>
                             <strong>Yuro Silva</strong>
