@@ -1,9 +1,49 @@
 import { Post } from './components/Post'
 import styles from "./App.module.css"
 import { Header } from './components/Header'
-
 import "./global.css"
 import { Sidebar } from './components/Sidebar'
+
+
+// author: { avatr_url: "", name: "", role: ""}
+// cpublishedAt: Date
+// content: String
+
+const posts =[
+  {
+    id: 1,
+    author: {
+      avatarUrl: "http://github.com/yures1lva.png",
+      name: "Yuro Silva",
+      role: "CTO @ SNST"
+    },
+
+    content: [
+     { type: "paragraph", content: "Fala pessoal",},
+      {type:"paragraph",content: "Acabei de subir mais um projeto no meu portfólio. É um projeto que fiz no NLW return, evento da Rocketseat", },
+      {type: "link", content: "jane.design/doctorcare"},      
+    ],
+
+    publishedAt: new Date('2023-10-03 20:00:00')
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "http://github.com/AlexWendel.png",
+      name: "Alex Wendel",
+      role: "CTO @ SNST"
+    },
+    
+    content: [
+     { type: "paragraph", content: "Fala pessoal",},
+      {type:"paragraph",content: "Acabei de realizar um bootcamp fornecido gratuitamente pela NevCode sobre inteligencia Artificial para desenvolvimento Mobile, foi muito bomm", },
+      {type: "link", content: "jane.design/doctorcare"},      
+    ],
+
+    publishedAt: new Date('2023-10-04 20:00:00')
+  }
+];
+
 
 export function App() {
 
@@ -14,16 +54,14 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar/>
         <main>
-          <Post
-            author="yuro"
-            content="k a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem"
-          />
-
-<Post
-            author="Seumuel"
-            content="Acabei de realizar um bootcamp fornecido gratuitamente pela NevCode sobre
-            inteligencia Artificial para desenvolvimento Mobile, foi muito bomm"
-          />
+          {posts.map(post =>{
+            return (<Post
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+            )
+          })}
         </main>
       </div>
         
