@@ -1,14 +1,16 @@
+import { Avatar } from "./Avatar"
 import { Comment } from "./Comment"
 import styles from "./styles/Post.module.css"
 
-export function Post(){
+export function Post({author,content}){
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img src="https://avatars.githubusercontent.com/u/43683688?v=4"></img>
+                    <Avatar  src="https://avatars.githubusercontent.com/u/43683688?v=4"/>
+
                     <div className={styles.authorInfo}>
-                        <strong>Yuro Silva</strong>
+                        <strong>{author}</strong>
                         <span>Web Developer</span>
                     </div>
                 </div>
@@ -18,8 +20,7 @@ export function Post(){
             <div className={styles.content}>
                 <p>Fala galera</p>
 
-                <p>Acabei de realizar um bootcamp fornecido gratuitamente pela NevCode sobre
-                inteligencia Artificial para desenvolvimento Mobile, foi muito bomm</p>
+                <p>{content}</p>
 
                 <p><a href="#">NevCode.com/bootcamp</a></p>
 

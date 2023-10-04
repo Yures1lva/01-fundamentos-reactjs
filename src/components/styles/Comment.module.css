@@ -2,10 +2,12 @@
 
 
 .comment {
+    margin: 0;
+    padding: 0;
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
-
+    
 }
 
 
@@ -14,16 +16,25 @@
     width: 3rem;
     height: 3rem;
     border-radius: 48px;
+
 }
 
 .commentBox{
     flex: 1;
+    display: flex;
+ 
+    
+
 }
 
 .commentContent{
     background: var(--gray-700);
     border-radius: 8px;
     padding: 1rem;
+    margin: 0;
+    width: 100%;
+
+
 }
 
 .commentContent header{
@@ -73,5 +84,21 @@
 
 .contentBox footer button{
     background: transparent;
+    border: none;
+    color: var(--gray-400);
+    display: flex;
+    margin-top: 0.475rem;
+    gap: 6px;
+    border-radius: 5px;
+
+}
+
+.contentBox footer button:hover{
+    background-color: var(--gray-700);
+}
+
+.contentBox footer button span::before{
+    content: '\2022';
+    margin-right: 5px;
 
 }

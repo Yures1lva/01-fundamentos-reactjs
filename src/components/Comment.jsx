@@ -1,12 +1,15 @@
 import styles from './styles/Comment.module.css'
 import Trash from '../assets/Trash.svg'
 import Like from '../assets/like.svg'
+import { Avatar } from "./Avatar"
+
 
 export function Comment(){
     return (
         <>
         <div className={styles.comment}>
-            <img src="https://github.com/yures1lva.png"  />
+            <Avatar hasBorder={false} src="https://avatars.githubusercontent.com/u/43683688?v=4"/>
+                
             <div className={styles.contentBox}>
                 <div className={styles.commentContent}>
                     <header>
@@ -19,7 +22,7 @@ export function Comment(){
                         </button>
 
                     </header>
-                    <p>parabens</p>
+                    <p>parabens pelo trabalh ajds ajas ja sjs asjsakas k ask sk ka ak kas kd o</p>
                 </div>
 
                 <footer>
