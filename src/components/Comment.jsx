@@ -4,7 +4,12 @@ import Like from '../assets/like.svg'
 import { Avatar } from "./Avatar"
 
 
-export function Comment({content}){
+export function Comment({content, onDeleteComment}){
+
+    function handleDeleteComment() {
+        onDeleteComment(content)
+    }
+
     return (
         <>
         <div className={styles.comment}>
@@ -17,7 +22,7 @@ export function Comment({content}){
                             <strong>Yuro Silva</strong>
                             <time title="11 de maio ás 08:13" dateTime="2022-05-11 08:03:20" >Cerca de 1h atrás</time>
                         </div>
-                        <button title='Deletar comentário'>
+                        <button onClick={handleDeleteComment} title='Deletar comentário'>
                             <img src={Trash}/>
                         </button>
 
