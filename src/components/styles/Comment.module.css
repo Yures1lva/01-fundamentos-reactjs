@@ -19,12 +19,9 @@
 
 }
 
-.commentBox{
+.contentBox{
     flex: 1;
-    display: flex;
  
-    
-
 }
 
 .commentContent{
@@ -46,6 +43,8 @@
 .authorAndTime{
     display: flex;
     flex-direction: column;
+    
+    
 }
 
 .authorAndTime strong{
