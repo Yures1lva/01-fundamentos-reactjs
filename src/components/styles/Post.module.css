@@ -96,6 +96,7 @@
     outline: 1px solid var(--green-300);
 }
 
+/*
 .commentForm .commentFooter{
     visibility: hidden;
     max-height: 0;
@@ -109,9 +110,9 @@
     max-height: none;
 
 }
+*/
 
-
-.buttonForm {
+.buttonForm[type=submit] {
     padding: 1rem;
     width: 6.75rem;
     color: var(--white);
@@ -120,12 +121,22 @@
     border-radius: 8px;
     border: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: all ease .3s;
 }
 
-.buttonForm:hover {
+.buttonForm[type=submit]:not(:disabled)hover {
     background: var(--green-300);
     cursor: pointer;
 
+}
+
+.buttonForm[type=submit]:disabled{
+    
+    cursor: not-allowed;
+    background: transparent;
+    border: 2px solid var(--green-500);
+    color: var(--gray-400);
 }
 
 .commentList {
