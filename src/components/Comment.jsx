@@ -4,7 +4,7 @@ import Like from '../assets/like.svg'
 import { Avatar } from "./Avatar"
 
 
-export function Comment(){
+export function Comment({content}){
     return (
         <>
         <div className={styles.comment}>
@@ -22,7 +22,7 @@ export function Comment(){
                         </button>
 
                     </header>
-                    <p>parabens pelo trabalh ajds ajas ja sjs asjsakas k ask sk ka ak kas kd o</p>
+                    <p>{content}</p>
                 </div>
 
                 <footer>

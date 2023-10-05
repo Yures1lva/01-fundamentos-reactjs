@@ -17,7 +17,9 @@ export function Post({author, publishedAt, content}){
 
      function handleCreateNewComment(){
         event.preventDefault()
-        setComments([...comments, comments.lenght + 1])
+        const newCommentText = event.target.comment.value
+        setComments([...comments, newCommentText])
+        event.target.comment.value =''
     }
 
     return (
@@ -46,10 +48,10 @@ export function Post({author, publishedAt, content}){
                 })}
 
             </div>
-            <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
+            <form  onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
 
-                <textarea  placeholder="Deixe um comentário"></textarea>
+                <textarea name="comment" placeholder="Deixe um comentário"></textarea>
 
                 <footer className={styles.commentFooter}>
                     <button className={styles.buttonForm} type="submit">Publicar</button>
@@ -58,7 +60,7 @@ export function Post({author, publishedAt, content}){
                 <div className={styles.commentList}>
                     {comments.map(comment =>
                         {
-                            return <Comment/>
+                            return <Comment content={comment} />
                         })}
                 </div>        
             </form>
