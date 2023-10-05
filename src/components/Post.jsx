@@ -93,7 +93,7 @@ export function Post({author, publishedAt, content}){
                     onChange={handleNewCommentChange}
                     value={newCommentText}
                     required
-                    onInvalid={handleNewCommentValid}
+                  onInvalid={handleNewCommentValid}
                  ></textarea>
 
                 <footer className={styles.commentFooter}>
